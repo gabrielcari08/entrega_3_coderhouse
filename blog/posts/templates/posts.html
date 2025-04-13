@@ -4,6 +4,28 @@
 
 {% block content %}
 
-<p>Aqui se muestran los posts</p>
+<h2>Lista de posts</h2>
+<ul>
+  {% for post in posts %}
+    <li>
+      <strong>{{ post.title }}</strong><br>
+      Autor: {{ post.author.name }}<br>
+      Categoría: {{ post.category.name }}<br>
+      Publicado: {{ post.published_date }}
+    </li>
+  {% empty %}
+    <li>No hay posts disponibles con ese filtro.</li>
+  {% endfor %}
+</ul>
+
+<h2>Insert Post</h2>
+
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Guardar</button>
+</form>
+
+
 
 {% endblock %}

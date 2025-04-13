@@ -4,6 +4,12 @@
 
 {% block content %}
 
-<p>Aqui se muestran las categorias</p>
+<h2>Insertar categoria</h2>
+
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Guardar</button>
+</form>
 
 {% endblock %}

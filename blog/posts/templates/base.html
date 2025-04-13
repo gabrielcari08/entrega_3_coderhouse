@@ -17,6 +17,30 @@
 
     <h1>Bienvenido a mi WEB</h1>
 
+    <h3>¿Deseas buscar algo en especifico?</h3>
+
+    <nav>
+        <form method="get" action="{% url 'posts' %}">
+          <label for="author">Autor:</label>
+          <select name="author" id="author">
+            <option value="">Todos</option>
+            {% for a in all_authors %}
+              <option value="{{ a.id }}">{{ a.name }}</option>
+            {% endfor %}
+          </select>
+      
+          <label for="category">Categoría:</label>
+          <select name="category" id="category">
+            <option value="">Todas</option>
+            {% for c in all_categories %}
+              <option value="{{ c.id }}">{{ c.name }}</option>
+            {% endfor %}
+          </select>
+      
+          <button type="submit">Filtrar</button>
+        </form>
+      </nav>
+
     {% block content %}
 
     {% endblock %}
