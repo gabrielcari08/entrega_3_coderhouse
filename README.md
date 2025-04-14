@@ -44,3 +44,13 @@ En categoría nos pide el nombre de la categoria del post (deportivo, cientifico
 En post, podemos insertar una publicacion completando cada uno de los campos que nos pide. El autor y la categoria se completan seleccionando el nombre de estos mismos, ya que estaran almacenados en la base de datos.
 
 Volviendo al inicio, veremos un buscador. Este buscador nos permite filtrar posts por autor y categoria. Cuando apretamos el boton "filtrar", nos lleva a la seccion de posts. Alli veremos listados cada uno de los posts (si es que hay) con su respectiva informacion. Acá podemos filtrar y ver los posts unicamente de un autor en especifico o categoria si es que asi lo queremos.
+
+Si queremos ver el contenido almacenado podemos entrar al panel de administracion:
+Pasos a seguir:
+1. Ejecutamos por terminal: python manage.py createsuperuser
+2. Completamos los datos que nos pide (nombre de usuario, email, contraseña)
+3. Una vez hecho esto ejecutamos el programa: python manage.py runserver
+4. Accedemos a: http://127.0.0.1:8000/admin/
+5. Ingresamos los mismos datos que pusimos antes por terminal
+6. Si hemos seguido los pasos de forma correcta, podremos entrar al panel de administracion de django
+
